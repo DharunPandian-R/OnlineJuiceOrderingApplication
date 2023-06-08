@@ -1,0 +1,187 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "signup": [
+    {
+      "nname": "Dharun12",
+      "npassword": "Dharun@12",
+      "cpassword": "Dharun@12",
+      "id": 1
+    },
+    {
+      "nname": "Pravin32",
+      "npassword": "Pravin@32",
+      "cpassword": "Pravin@32",
+      "id": 2
+    },
+    {
+      "nname": "Partha45",
+      "npassword": "Aspire@12",
+      "cpassword": "Aspire@12",
+      "id": 3
+    },
+    {
+      "nname": "Prajesh12",
+      "npassword": "Prajesh@12",
+      "cpassword": "Prajesh@12",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "image": "https://tse2.mm.bing.net/th?id=OIP.yVbsKVU9zz4ZvK88uoAWfgHaHa&pid=Api&P=0",
+      "price": 50,
+      "title": "Apple Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    },
+    {
+      "id": 2,
+      "image": "https://tse4.mm.bing.net/th?id=OIP.O2at9d7JkZdSQVrZft3PoQHaFj&pid=Api&P=0",
+      "price": 55,
+      "title": "Orange Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    },
+    {
+      "id": 3,
+      "image": "https://tse1.mm.bing.net/th?id=OIP.ZlifecsWJV55qGjMXrR4WAHaFc&pid=Api&P=0",
+      "price": 40,
+      "title": "Mango Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    },
+    {
+      "id": 4,
+      "image": "https://tse2.mm.bing.net/th?id=OIP.WRuMsEYOGoOlgFHecz9pnwHaHa&pid=Api&P=0",
+      "price": 30,
+      "title": "Watermelon Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    },
+    {
+      "id": 5,
+      "image": "https://tse4.mm.bing.net/th?id=OIP.hlFbCd13zOVmHA81UPVbSAHaGq&pid=Api&P=0",
+      "price": 56,
+      "title": "Pineapple Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    },
+    {
+      "id": 6,
+      "image": "https://tse3.mm.bing.net/th?id=OIP.9t5_3CImUXHH7n9S1N_CTgHaLH&pid=Api&P=0",
+      "price": 35,
+      "title": "Grape Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    },
+    {
+      "id": 7,
+      "image": "https://tse4.mm.bing.net/th?id=OIP.UC-_Y0wGi9FryxR3Z8txnQHaE7&pid=Api&P=0",
+      "price": 60,
+      "title": "Dragon Fruit Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    },
+    {
+      "id": 8,
+      "image": "https://tse3.mm.bing.net/th?id=OIP.XJATITm4NOSTATAlaXzIdAHaE8&pid=Api&P=0",
+      "price": 60,
+      "title": "Avocado Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    },
+    {
+      "id": 9,
+      "image": "https://tse1.explicit.bing.net/th?id=OIP.sOI52mQijfQtgFY2Mer2BAHaE7&pid=Api&P=0",
+      "price": 30,
+      "title": "Lemon Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      }
+    }
+  ],
+  "CartItem": [
+    {
+      "id": 1,
+      "image": "https://tse2.mm.bing.net/th?id=OIP.yVbsKVU9zz4ZvK88uoAWfgHaHa&pid=Api&P=0",
+      "price": 50,
+      "title": "Apple Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      },
+      "quantity": 4,
+      "total": 200
+    },
+    {
+      "id": 2,
+      "image": "https://tse4.mm.bing.net/th?id=OIP.O2at9d7JkZdSQVrZft3PoQHaFj&pid=Api&P=0",
+      "price": 55,
+      "title": "Orange Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      },
+      "quantity": 4,
+      "total": 220
+    },
+    {
+      "id": 9,
+      "image": "https://tse1.explicit.bing.net/th?id=OIP.sOI52mQijfQtgFY2Mer2BAHaE7&pid=Api&P=0",
+      "price": 30,
+      "title": "Lemon Juice",
+      "discount": {
+        "start": "2023-06-08T08:00:00",
+        "end": "2023-06-08T09:30:00",
+        "percentage": 15
+      },
+      "quantity": 2,
+      "total": 60
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+<body>
+<div class="Container">
+  <div class="left">
+       <h1>DELIVARY ADDRESS</h1>
+       <form [formGroup]="address">
+        <label>Enter Name:</label>
+        <input type="text" name="UserName" formControlName="UserName" pattern required>
+        <div *ngIf="address.controls['UserName'].invalid&&(address.controls['UserName'].dirty||address.controls['UserName'].touched)">
+          <small *ngIf="address.controls['UserName'].errors?.['required']">Please enter Username</small>
+          <small *ngIf="address.controls['UserName'].errors?.['pattern']">!!Initial followed by '.' followed by your name without space and minimum eight characters.</small>
+        </div>
+        <label>Enter Email:</label>
+        <input type="email" name="email" formControlName="Email">
+        <div *ngIf="address.controls['Email'].invalid&&(address.controls['Email'].dirty||address.controls['Email'].touched)">
+          <small *ngIf="address.controls['Email'].errors?.['required']">Please enter Email</small>
+          <small *ngIf="address.controls['Email'].errors?.['pattern']">!!Given email id is not valid.</small>
+        </div>
+        <label>Enter Contact Number:</label>
+        <input type="text" name="contact" formControlName="contact">
+        <div *ngIf="address.controls['contact'].invalid&&(address.controls['contact'].dirty||address.controls['contact'].touched)">
+          <small *ngIf="address.controls['contact'].errors?.['required']">Please enter Contact Number</small>
+          <small *ngIf="address.controls['contact'].errors?.['pattern']">!!Must be 10 digit number.</small>
+        </div>
+        <label>Enter Address:</label>
+        <input type="text" name="address" formControlName="address">
+        <div *ngIf="address.controls['address'].invalid&&(address.controls['address'].dirty||address.controls['address'].touched)">
+          <small *ngIf="address.controls['address'].errors?.['required']">Please enter Address</small>
+        </div>
+        <label>Enter City Name:</label>
+        <input type="text" name="city" formControlName="city">
+        <br>
+        <button class="btn btn-dark" (click)="onClick()">
+          {{PaymentOption?"Card Payment":"Cash On Delivary"}}
+        </button><span></span>
+          <button class="btn btn-dark" (click)="successOrder()">Confirm Order
+          </button>
+       </form>
+  </div>
+  <div class="right">
+    <ng-container *ngIf="!visible">
+      <h1>PAYMENT  <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> {{PaymentOption?"Cash On Delivary":"Card Payment"}}</h1>
+    </ng-container>
+    <ng-container *ngIf="visible">
+    <h1>PAYMENT  <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> {{PaymentOption?"Cash On Delivary":"Card Payment"}}</h1>
+    <form [formGroup]="gateway" class="aligner">
+      <label>Accepted Card</label>
+      <br>
+      <img src="https://tse3.mm.bing.net/th?id=OIP.7M_IxB3MvTvnbRB82JC1LAHaEK&pid=Api&P=0" width="60">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.FtvETY1E_WFX9yKpZ057BwHaE1&pid=Api&P=0" width="50">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.n_uHLfevU9EhzuiP9yfP5gHaEa&pid=Api&P=0" width="60" >
+      <br><br>
+      <label>Enter Card Number:</label>
+      <input type="text" name="card" formControlName="card" pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}" required>
+      <div *ngIf="gateway.controls['card'].invalid&&(gateway.controls['card'].dirty||gateway.controls['card'].touched)">
+        <small *ngIf="gateway.controls['card'].errors?.['required']">Please enter Card Number</small>
+        <small *ngIf="gateway.controls['card'].errors?.['pattern']">!!Must be sixteen digit number.</small>
+      </div>
+      <br>
+      <label>Enter Expiry Month And Year:</label>
+      <input type="text" name="Expiry" formControlName="Expiry" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" required>
+      <div *ngIf="gateway.controls['Expiry'].invalid&&(gateway.controls['Expiry'].dirty||gateway.controls['Expiry'].touched)">
+        <small *ngIf="gateway.controls['Expiry'].errors?.['required']">Please enter Expiry month and year</small>
+        <small *ngIf="gateway.controls['Expiry'].errors?.['pattern']">!!Ex:mm/yy.</small>
+      </div>
+      <label>CVV:</label>
+        <input type="text" name="CVV" formControlName="cvv" pattern="\d{3,4}" required>
+        <div *ngIf="gateway.controls['cvv'].invalid&&(gateway.controls['cvv'].dirty||gateway.controls['cvv'].touched)">
+          <small *ngIf="gateway.controls['cvv'].errors?.['required']">Please enter CVV Number</small>
+          <small *ngIf="gateway.controls['cvv'].errors?.['pattern']">!!Must be three or four digit number.</small>
+        </div>
+     </form>
+    </ng-container>
+  </div>
+  </div>
+
+
+</body>

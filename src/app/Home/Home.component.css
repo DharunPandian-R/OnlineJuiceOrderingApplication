@@ -1,0 +1,388 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  position: relative;
+  display: block;
+  transition: .5s;
+}
+a::after{
+  position :absolute;
+  content:"";
+  width:100%;
+  height: 3px;
+  top:100%;
+  left:0;
+  transition: transform .5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+a:hover{
+  color: #0ec8bb;
+}
+a:hover::after{
+  transform:scale(1);
+  transform-origin: left;
+}
+.mat-icon{
+  padding-bottom: 3px;
+}
+.Logo1{
+  text-align: start;
+}
+.foot .footer-left img{
+  height: 64px;
+
+}
+footer{
+  position: fixed;
+  bottom: 0;
+}
+@media(max-height:80px)
+{
+  footer{
+    position: static;
+  }
+}
+.foot{
+  background-color: #5989ae;
+  box-sizing: border-box;
+  widows: 100%;
+  text-align: center;
+  padding: 30px 40px 15px 40px;
+  margin-top: 80px;
+}
+.foot .footer-left , .foot .footer-center , .foot .footer-right{
+       display: inline-block;
+       vertical-align: top;
+}
+.foot .footer-left{
+    width: 25%;
+    color:#ffff;
+
+}
+.foot .footer-left h3{
+  font:normal 36px 'cookie',cursive;
+  margin: 0;
+  position: relative;
+  left: -30px;
+}
+.foot .footer-left img{
+  position: relative;
+  bottom: -14px;
+}
+.foot .footer-center h3{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.foot .foot-link{
+  margin: 20px 0 12px;
+  color:#ffff;
+}
+.foot .foot-link :hover{
+   color: aquamarine;
+}
+.foot .foot-link a{
+  display: inline-block;
+  line-height: 1.0;
+  text-decoration: none;
+  color: inherit;
+}
+.foot .footer-about-company{
+  font-weight: normal;
+  margin: 0;
+}
+.foot .footer-center{
+  width: 40%;
+  color:#ffff;
+}
+.foot .footer-center i{
+  background-color: #33383b;
+  color: #ffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: center;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+.foot .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+.foot .footer-center i.fa-map-marker{
+  font-size: 17px;
+  line-height: 38px;
+}
+.foot .footer-center p{
+  text-align: left;
+}
+.foot .footer-center i.fa-phone{
+  font-size: 17px;
+  line-height: 38px;
+}
+.foot .footer-center p{
+  display: inline-block;
+  color:#ffff;
+  vertical-align: middle;
+  margin: 0;
+}
+.foot .footer-center p span{
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1;
+}
+.foot .footer-center p{
+  color:#ffff;
+  text-decoration: none;
+  padding-right: 2px;
+
+}
+.foot .footer-right{
+  width: 30%;
+}
+.foot .footer-about-company{
+  line-height: 20px;
+  color:#ffff;
+  font-size: 13px;
+  margin: 0;
+}
+.foot .footer-about-company span{
+  display: block;
+  color:#ffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.foot .footer-icons{
+  margin-top: 25px;
+}
+.foot .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 1px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+
+}
+.foot .footer-icons a:hover{
+  color:#3f71ea;
+}
+@media(max-width:80px){
+  .foot .foot-link, .foot .footer-center, .foot .footer-right, .foot .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .foot .footer-center i{
+    margin-left: 0;
+  }
+}
+.foot-cen{
+  text-align: middle;
+  padding-right: 87px;
+}
+.foot-cen1{
+  padding-right: 150px;
+}
+.foot-cen2{
+  padding-right: 109px;
+}
+.header{
+  position: absolute;
+}
+/*------------Home---------------*/
+.home{
+  width:100%;
+  height: 60vh;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.home .home_left{
+  position: relative;
+  bottom: 20px;
+  left:5%
+}
+.home .home_left h1{
+  font-size: 50px;
+  margin-bottom: 30px;
+  line-height: 70px;
+}
+.home .home_left p{
+  width: 650px;
+  font-size: 22px;
+  text-align: justify;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.home .home_left h1 span{
+  color:#fda211;
+  margin-left: 15px;
+  transition: 0.2s;
+
+}
+.home .home_left h1 span:hover{
+  color: #ffcc33;
+}
+.home .home_right img{
+  width: 750;
+  margin-left: 95px;
+}
+.anim{
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: moveside 0.5s linear forwards;
+}
+@keyframes moveside{
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*------------About---------------*/
+.about{
+  width:100%;
+  height: 60vh;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about .about_image img{
+   width: 650;
+}
+.about .about_tag h1{
+  font-size: 50px;
+  margin-bottom: 30px;
+  line-height: 70px;
+}
+.about .about_tag p{
+  width: 650px;
+  font-size: 22px;
+  text-align: justify;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+/*------------Products---------------*/
+.healthy{
+  width:100%;
+  height: 60vh;
+  padding: 65px 0 20px 0;
+}
+.healthy h1{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  line-height: 70px;
+}
+.healthy .products{
+  width: 95%;
+  margin: 0 auto;
+  background: #e1eaea;
+  padding: 20px;
+  border-radius: 25px;
+}
+.healthy .products .products_box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.healthy .products p{
+  width: 1300px;
+  text-align: justify;
+  line-height: 22px;
+  margin-bottom: 35px;
+  font-size: medium;
+}
+.healthy .products .products_card{
+  width: 260px;
+  height: 320px;
+  border: 2px solid #5fdc72;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin:0 auto;
+}
+.healthy .products .products_card a{
+  text-decoration: none;
+
+}
+.healthy .products .products_card a:hover{
+  text-decoration: none;
+  color: rgb(44, 177, 39);
+}
+.healthy .products .products_card .products_img img{
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.healthy .products .products_card:hover .products_img img{
+  transform:scale(1.1) ;
+}
+.healthy .products .products_card .products_tag h2{
+  text-align: center;
+  margin: 10px 0;
+}
+.healthy .products .products_card .products_tag li{
+  width: auto;
+  text-align: initial;
+  padding-left: 50px;
+
+}
+/*------------Service---------------*/
+.services{
+  width:100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 80px;
+}
+.services .services_box{
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap:0 10px;
+}
+.services .services_box .services_card{
+  margin: 0 auto;
+  width: 300px;
+  background: #a8e3e1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.services .services_box .services_card div{
+  font-size: 35px;
+  margin: 10px;
+  color: #ad920a;
+}
+.services .services_box .services_card h2{
+  font-size: 20px;
+  padding: 8px;
+}
+
+
+
+

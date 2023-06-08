@@ -1,0 +1,40 @@
+<body>
+  <div class="center">
+    <h1>Signup</h1>
+    <br>
+    <form [formGroup]="signup" (ngSubmit)="signUpData(signup)">
+      <div class="txt_field">
+        <input type="text" formControlName="nname" placeholder="Ex:Dharun123" pattern required>
+        <span></span>
+        <label>Username:</label>
+      </div>
+      <div *ngIf="signup.controls['nname'].invalid&&(signup.controls['nname'].dirty||signup.controls['nname'].touched)">
+        <small *ngIf="signup.controls['nname'].errors?.['required']">Please enter Username</small>
+        <small *ngIf="signup.controls['nname'].errors?.['pattern']">!!Minimum eight characters, at least one uppercase letter, one lowercase letter and one number.</small>
+      </div>
+      <div class="txt_field">
+        <input type="password" name="npassword" formControlName="npassword" placeholder="Ex:Aspire@123" pattern required>
+        <span></span>
+        <label>Password:</label>
+      </div>
+      <div *ngIf="signup.controls['npassword'].invalid&&(signup.controls['npassword'].dirty||signup.controls['npassword'].touched)">
+        <small *ngIf="signup.controls['npassword'].errors?.['required']">!!Please enter password</small>
+        <small *ngIf="signup.controls['npassword'].errors?.['pattern']">!!Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character.</small>
+      </div>
+      <div class="txt_field">
+        <input type="password" name="cpassword" formControlName="cpassword" required/>
+        <span></span>
+        <label>Confirm Password:</label>
+      </div>
+      <div *ngIf="signup.controls['cpassword'].invalid&&(signup.controls['cpassword'].dirty||signup.controls['cpassword'].touched)">
+        <small *ngIf="signup.controls['cpassword'].errors?.['required']">!!Please Re-enter password</small>
+        <small *ngIf="signup.controls['cpassword'].errors?.['confirmedValidator']">!!Unmatched</small>
+      </div>
+
+      <button [disabled]="!signup.valid" type="submit" mat-raised-button>SIGNUP</button>
+      <div class="Login_link">
+        Already have an account? <a [routerLink]="['/Login']">Login</a>
+      </div>
+    </form>
+  </div>
+</body>

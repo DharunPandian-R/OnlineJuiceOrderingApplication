@@ -1,0 +1,14 @@
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<header>
+  <mat-toolbar class="colr">
+    <img class="logo" src="https://cdn.freelogodesign.org/files/aa3eebab2b974ffdbe2fee5ae96dbafc/thumb/logo_200x200.png?v=638146499990000000"><a routerLink="Home">Juice World</a>
+    <div class="spacer"></div>
+   <a [routerLink]="['/Home']" mat-button> <mat-icon>home</mat-icon>Home</a>
+   <a *ngIf="!loggedIn()" [routerLink]="['/Login']" mat-button><mat-icon>login</mat-icon>Login</a>
+   <a *ngIf="loggedIn()"  (click)="logout()" mat-button><mat-icon>logout</mat-icon>Logout</a>
+   <a [routerLink]="['/Purchase']" mat-button><mat-icon>shopping_basket</mat-icon>Purchase</a>
+    </mat-toolbar>
+</header>
+<router-outlet></router-outlet>

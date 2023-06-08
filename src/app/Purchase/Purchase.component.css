@@ -1,0 +1,44 @@
+.card img{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+  margin-left: 25px;
+  transition: 0.3s ease-in-out;
+}
+.card img:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 20px;
+  min-width: 0;
+ border: 2px solid grey;
+}
+.card h3{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100ch;
+  text-align: center;
+  font-weight: bolder;
+}
+.card p{
+  text-align: center;
+}
+button{
+  background-color: cadetblue;
+}
+button:hover{
+  background-color: rgb(37, 175, 37);
+}
+.discounted p{
+  text-decoration: line-through;
+  color: red;
+  text-align: center;
+}
+
+

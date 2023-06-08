@@ -1,0 +1,31 @@
+<body>
+  <div class="center">
+    <h1>USER LOGIN</h1>
+    <br>
+    <form [formGroup]="login" (ngSubmit)="loginData(login)">
+      <div class="txt_field">
+        <input  type="text" name='fname' formControlName="fname" required minlength="3">
+        <span></span>
+        <label>Username:</label>
+      </div>
+      <div *ngIf="login.controls['fname'].invalid&&(login.controls['fname'].dirty||login.controls['fname'].touched)">
+        <small *ngIf="login.controls['fname'].errors?.['required']">!!Please enter Username</small>
+        <small *ngIf="login.controls['fname'].errors?.['minlength']">!!Please enter Username with atleast 3 characters</small>
+          </div>
+      <div class="txt_field">
+
+        <input type="password" name="fpassword"formControlName="fpassword" required>
+        <span></span>
+        <label>Password:</label>
+      </div>
+      <div *ngIf="login.controls['fpassword'].invalid&&login.controls['fpassword'].touched">
+        <small *ngIf="login.controls['fpassword'].errors?.['required']">!!Please enter Password</small>
+      </div>
+      <div class="pass"><a [routerLink]="['/ForgotPassword']">Forgot Password?</a></div>
+      <button [disabled]="!login.valid" type="submit" mat-raised-button>LOGIN</button>
+      <div class="signup_link">
+        Not a member? <a  [routerLink]="['/Signup']">Signup</a>
+      </div>
+    </form>
+  </div>
+</body>

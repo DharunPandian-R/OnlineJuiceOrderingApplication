@@ -1,0 +1,21 @@
+.colr{
+  background-color:#5989ae;
+}
+.colr a{
+  text-decoration: none;
+  color: inherit;
+}
+.colr a:hover{
+  color: #0ec8bb;
+}
+.spacer{
+  flex:1 1 auto;
+}
+.logo{
+  width: 69px;
+  height: 64px;
+}
+
+
+
+

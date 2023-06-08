@@ -1,0 +1,21 @@
+<body>
+  <button style="position: relative;left: 1250px;top:20px;" class="btn btn-light">
+    <i style="font-size: 30px ;" [routerLink]="['/cart']" class="fa fa-cart-plus" ></i>
+  </button>
+  <div class="container">
+    <div class="row">
+  <ng-container *ngFor="let item of productlist">
+      <div class="card col-md-3">
+         <img src="{{item.image}}">
+         <h3>{{item.title}}</h3>
+         <p *ngIf="!hasDiscount(item)"><strong>Amount: </strong>Rs.{{item.price}}/-</p>
+         <span *ngIf="hasDiscount(item)">
+          <div class="discounted"><p><strong>Amount: </strong>Rs.{{item.price}}/-</p></div>
+         <p><strong>Discounted Amount: </strong>Rs.{{calculateDiscountPrice(item)}}/-</p>
+         </span>
+        <button class="btn btn-dark" (click)="addToCart(item)">Add to cart</button>
+      </div>
+    </ng-container>
+    </div>
+   </div>
+  </body>
